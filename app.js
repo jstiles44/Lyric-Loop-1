@@ -34,21 +34,7 @@ const getHot100 = async () => {
     // console.log(hot100RandomArray[Math.floor((Math.random() * 2) + 0)].track.track_id)
 
     
-    // let choice1Container = document.createElement('button')
-    // choice1Container.setAttribute('class', 'choice-one')
-    // gameContainer.appendChild(choice1Container)
-    // choice1Container.innerHTML = hot100Random1.track.artist_name
-    // console.log(choice1Container)
-    
-    // let choice2Container = document.createElement('button')
-    // choice2Container.setAttribute('class', 'choice-two')
-    // gameContainer.appendChild(choice2Container)
-    // choice2Container.innerHTML = hot100Random2.track.artist_name
-
-    // let choice3Container = document.createElement('button')
-    // choice3Container.setAttribute('class', 'choice-three')
-    // gameContainer.appendChild(choice3Container)
-    // choice3Container.innerHTML = hot100Random3.track.artist_name
+   
     
     getLyricSnippet(hot100RandomArray)
     
@@ -84,26 +70,47 @@ const getLyricSnippet = async (arr) => {
     snippetContainer.innerHTML = lyricSnippet
 
      
-
-    // let choice1Container = document.querySelector('#choice-one')
-  
     let choice1Container = document.createElement('button')
     choice1Container.setAttribute('class', 'choice-one')
     gameContainer.appendChild(choice1Container)
     choice1Container.innerHTML = arr[0].track.artist_name
+
+
+    let choice2Container = document.createElement('button')
+    choice2Container.setAttribute('class', 'choice-two')
+    gameContainer.appendChild(choice2Container)
+    choice2Container.innerHTML = arr[1].track.artist_name
+    
+    
+    let choice3Container = document.createElement('button')
+    choice3Container.setAttribute('class', 'choice-three')
+    gameContainer.appendChild(choice3Container)
+    choice3Container.innerHTML = arr[2].track.artist_name
+    
+    
+    
+    // let choice1Container = document.createElement('button')
+    // choice1Container.setAttribute('class', 'choice-one')
+    // gameContainer.appendChild(choice1Container)
+    // choice1Container.innerHTML = arr[0].track.artist_name
     choice1Container.addEventListener('click', () => {
       if (snippetTrackID === arr[0].track.track_id) {
         console.log('You Are Correct')
          score++
          questionTracker++
        
-        removeRound()
+        setTimeout(removeRound(), 3000)
 
       } else {
         console.log('Incorrect')
-         questionTracker++
+        questionTracker++
+        if (snippetTrackID === arr[1].track.track_id) {
+            console.log('Correct Answer: '+ arr[1].track.artist_name)
+        } else {
+          console.log('Correct Answer: '+ arr[2].track.artist_name)
+          }
        
-        removeRound()
+        setTimeout(removeRound(), 3000)
        
       }
       let scoreContainer = document.querySelector('#score')
@@ -113,24 +120,29 @@ const getLyricSnippet = async (arr) => {
 
 
 
-    // let choice2Container = document.querySelector('#choice-two')
-    let choice2Container = document.createElement('button')
-    choice2Container.setAttribute('class', 'choice-two')
-    gameContainer.appendChild(choice2Container)
-    choice2Container.innerHTML = arr[1].track.artist_name
+    // let choice2Container = document.createElement('button')
+    // choice2Container.setAttribute('class', 'choice-two')
+    // gameContainer.appendChild(choice2Container)
+    // choice2Container.innerHTML = arr[1].track.artist_name
     choice2Container.addEventListener('click', () => {
       if (snippetTrackID === arr[1].track.track_id) {
         console.log('You Are Correct')
         score++
         questionTracker++
       
-        removeRound()
+        setTimeout(removeRound(), 3000)
 
       } else {
         console.log('Incorrect')
-         questionTracker++
+        questionTracker++
+        if (snippetTrackID === arr[0].track.track_id) {
+          console.log('Correct Answer: '+ arr[0].track.artist_name)
+        } else {
+        console.log('Correct Answer: '+ arr[2].track.artist_name)
+        }
+     
         
-        removeRound()
+         setTimeout(removeRound(), 3000)
 
       }
       let scoreContainer = document.querySelector('#score')
@@ -138,24 +150,28 @@ const getLyricSnippet = async (arr) => {
       
     })
 
-    // let choice3Container = document.querySelector('#choice-three')
-    let choice3Container = document.createElement('button')
-    choice3Container.setAttribute('class', 'choice-three')
-    gameContainer.appendChild(choice3Container)
-    choice3Container.innerHTML = arr[2].track.artist_name
+    // let choice3Container = document.createElement('button')
+    // choice3Container.setAttribute('class', 'choice-three')
+    // gameContainer.appendChild(choice3Container)
+    // choice3Container.innerHTML = arr[2].track.artist_name
     choice3Container.addEventListener('click', () => {
       if (snippetTrackID === arr[2].track.track_id) {
         console.log('You Are Correct')
         score++
         questionTracker++
      
-        removeRound()
+        setTimeout(removeRound(), 3000)
 
       } else {
         console.log('Incorrect')
         questionTracker++
-    
-        removeRound()
+        if (snippetTrackID === arr[1].track.track_id) {
+          console.log('Correct Answer: '+ arr[1].track.artist_name)
+        } else {
+        console.log('Correct Answer: '+ arr[0].track.artist_name)
+        }
+     
+        setTimeout(removeRound(), 3000)
 
       }
       let scoreContainer = document.querySelector('#score')
