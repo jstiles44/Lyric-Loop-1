@@ -94,19 +94,15 @@ const getLyricSnippet = async (arr) => {
     choice1Container.addEventListener('click', () => {
       if (snippetTrackID === arr[0].track.track_id) {
         console.log('You Are Correct')
-        // score++
-        // questionTracker++
-        // choice1Container.disabled = true;
-        // choice2Container.disabled = true;
-        // choice3Container.disabled = true;
+         score++
+         questionTracker++
+       
         removeRound()
 
       } else {
         console.log('Incorrect')
-        // questionTracker++
-        // choice1Container.disabled = true;
-        // choice2Container.disabled = true;
-        // choice3Container.disabled = true;
+         questionTracker++
+       
         removeRound()
        
       }
@@ -125,14 +121,14 @@ const getLyricSnippet = async (arr) => {
     choice2Container.addEventListener('click', () => {
       if (snippetTrackID === arr[1].track.track_id) {
         console.log('You Are Correct')
-        // score++
-        // questionTracker++
+        score++
+        questionTracker++
       
         removeRound()
 
       } else {
         console.log('Incorrect')
-        // questionTracker++
+         questionTracker++
         
         removeRound()
 
@@ -150,14 +146,14 @@ const getLyricSnippet = async (arr) => {
     choice3Container.addEventListener('click', () => {
       if (snippetTrackID === arr[2].track.track_id) {
         console.log('You Are Correct')
-        // score++
-        // questionTracker++
+        score++
+        questionTracker++
      
         removeRound()
 
       } else {
         console.log('Incorrect')
-        // questionTracker++
+        questionTracker++
     
         removeRound()
 
@@ -167,8 +163,7 @@ const getLyricSnippet = async (arr) => {
 
     })
 
-    let scoreContainer = document.querySelector('#score')
-      scoreContainer.innerHTML = `Score: ${score}/${questionTracker}`
+    
 
   } catch (error) {
     console.log(error)
