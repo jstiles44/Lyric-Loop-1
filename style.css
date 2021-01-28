@@ -36,7 +36,7 @@ h1 {
   font-family: 'India Snake Pixel Labyrinth Gam 3d';
   font-weight: normal;
   padding: 20px;
-  padding-top: 50px;
+  padding-top: 60px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -64,9 +64,10 @@ h1 {
 #word-container {
   display: flex;
   justify-content: center;
-  position: absolute;
-  left: 100px;
-
+  position: relative;
+  margin: 0 auto;
+  right: 55px;
+  bottom: 20px;
 }
 
 .letters {
