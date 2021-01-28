@@ -10,13 +10,13 @@ let scoreContainer = document.querySelector('#score')
 scoreContainer.innerHTML = `Score: ${score}/${questionTracker}`
 
 let answerContainer = document.querySelector('#answer')
-answerContainer.innerHTML = 'Correct Answer Will Display Here'
+answerContainer.innerHTML = 'Correct Answer'
 // Get an array of the hot 100 tracks and produce and array of 3 random tracks from it
 
 const getHot100 = async () => {
   try {
     let response = await axios.get(hot100url)
-  //  console.log(response.data.message.body.track_list)
+  // console.log(response.data.message.body.track_list)
     let hot100Tracks = response.data.message.body.track_list
     // console.log(hot100Tracks)
     let hot100Random1 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
@@ -102,7 +102,7 @@ const getLyricSnippet = async (arr) => {
     // choice1Container.innerHTML = arr[0].track.artist_name
     choice1Container.addEventListener('click', () => {
       if (snippetTrackID === arr[0].track.track_id) {
-        console.log('You Are Correct')
+        console.log('Correct!')
         answerContainer.innerHTML = 'You Are Correct'
          score++
          questionTracker++
@@ -136,7 +136,7 @@ const getLyricSnippet = async (arr) => {
     // choice2Container.innerHTML = arr[1].track.artist_name
     choice2Container.addEventListener('click', () => {
       if (snippetTrackID === arr[1].track.track_id) {
-        console.log('You Are Correct')
+        console.log('Correct!')
         answerContainer.innerHTML = 'You Are Correct'
         score++
         questionTracker++
@@ -169,7 +169,7 @@ const getLyricSnippet = async (arr) => {
     // choice3Container.innerHTML = arr[2].track.artist_name
     choice3Container.addEventListener('click', () => {
       if (snippetTrackID === arr[2].track.track_id) {
-        console.log('You Are Correct')
+        console.log('Correct!')
         answerContainer.innerHTML = 'You Are Correct'
         score++
         questionTracker++

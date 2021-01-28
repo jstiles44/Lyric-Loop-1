@@ -1,0 +1,147 @@
+* {
+  display: flex;
+  flex-direction: column;
+}
+
+
+    @font-face {
+      font-family: 'India Snake Pixel Labyrinth Gam 3d';
+      font-style: normal;
+      font-weight: normal;
+      src: local('India Snake Pixel Labyrinth Gam 3d'), url('india snake pixel labyrinth game_3d.woff') format('woff');
+      }
+      
+button {
+  text-align: center;
+  align-items: center;
+  margin: 10px 100px;
+  font-family: 'Bebas Neue', cursive;
+  background-color: black;
+  color: goldenrod;
+}
+
+#snippet {
+  font-family: 'Bebas Neue', cursive;
+}
+
+
+h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: goldenrod;
+  background-color: black;
+  font-size: 100px;
+  font-family: 'India Snake Pixel Labyrinth Gam 3d';
+  font-weight: normal;
+  padding: 20px;
+  padding-top: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#game-body {
+  text-align: center;
+  background-color: goldenrod;
+  
+}
+
+#choice-one {
+  text-align: center;
+}
+
+#score, #answer {
+  font-family: 'India Snake Pixel Labyrinth Gam 3d';
+  text-align: center;
+  font-size: 50px;
+  background-color: black;
+  color: goldenrod;
+  margin: 0;
+  padding: 25px;
+}
+
+#word-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 100px;
+
+}
+
+.letters {
+  display: inline-block;
+  text-align: center;
+  font-family: 'India Snake Pixel Labyrinth Gam 3d';
+  font-size: 35px;
+  position: absolute;
+  padding-bottom: 200px;
+  color:goldenrod;
+  margin: 50px;
+  margin-top: 25px;
+  transform-origin: bottom center;
+  /* border: 1px red dotted;  */
+  transform: rotate(24deg);
+}
+
+#letter1 {
+  transform: rotate(-35deg);
+}
+#letter2 {
+  transform: rotate(-28deg);
+}
+#letter3 {
+  transform: rotate(-21deg);
+  
+}
+#letter4 {
+  transform: rotate(0deg);
+}
+#letter5 {
+  transform: rotate(-14deg);
+  padding-bottom: 150px;
+}
+#letter6 {
+  transform: rotate(-7deg);
+  padding-bottom: 100px;
+}
+#letter7 {
+  transform: rotate(7deg);
+  padding-bottom: 100px;
+}
+#letter8 {
+  transform: rotate(14deg);
+  padding-bottom: 150px;
+}
+#letter9 {
+  transform: rotate(0deg);
+}
+#letter10 {
+  transform: rotate(21deg);
+}
+#letter11 {
+  transform: rotate(28deg);
+}
+#letter12 {
+  transform: rotate(35deg);
+}
+
+#who-container {
+  
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+
+#sang-container {
+  
+  position: absolute;
+  
+}
+
+#it-container {
+  
+  position: absolute;
+  left: 15px;
+  top: 5px;
+}
