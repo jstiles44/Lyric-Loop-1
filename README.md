@@ -102,7 +102,7 @@ Use this section to include a brief code snippet of functionality that you are p
         <span class = 'letters' id = 'letter11'>T</span>
         <span class = 'letters' id = 'letter12'>?</span>
   </div>
-  </div>```
+  ```
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
