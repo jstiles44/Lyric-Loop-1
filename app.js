@@ -70,23 +70,25 @@ const getLyricSnippet = async (arr) => {
     gameContainer.appendChild(snippetContainer)
     snippetContainer.setAttribute('id', 'snippet')
     snippetContainer.innerHTML = lyricSnippet
-
+    buttonContainer = document.createElement('div')
+    buttonContainer.setAttribute('id', 'button-div')
+    gameContainer.appendChild(buttonContainer)
      
     let choice1Container = document.createElement('button')
     choice1Container.setAttribute('class', 'choice-one')
-    gameContainer.appendChild(choice1Container)
+    buttonContainer.appendChild(choice1Container)
     choice1Container.innerHTML = arr[0].track.artist_name
 
 
     let choice2Container = document.createElement('button')
     choice2Container.setAttribute('class', 'choice-two')
-    gameContainer.appendChild(choice2Container)
+    buttonContainer.appendChild(choice2Container)
     choice2Container.innerHTML = arr[1].track.artist_name
     
     
     let choice3Container = document.createElement('button')
     choice3Container.setAttribute('class', 'choice-three')
-    gameContainer.appendChild(choice3Container)
+    buttonContainer.appendChild(choice3Container)
     choice3Container.innerHTML = arr[2].track.artist_name
     
 
@@ -103,24 +105,24 @@ const getLyricSnippet = async (arr) => {
     choice1Container.addEventListener('click', () => {
       if (snippetTrackID === arr[0].track.track_id) {
         console.log('Correct!')
-        answerContainer.innerHTML = 'You Are Correct'
+        answerContainer.innerHTML = 'Correct!'
          score++
          questionTracker++
        
-        setTimeout(removeRound(), 10000)
+        setTimeout(removeRound(), 5000)
 
       } else {
         console.log('Incorrect')
         questionTracker++
         if (snippetTrackID === arr[1].track.track_id) {
           console.log('Correct Answer: ' + arr[1].track.artist_name)
-          answerContainer.innerHTML = `Incorrect. Correct Answer: ${arr[1].track.artist_name}`
+          answerContainer.innerHTML = `Correct Answer: ${arr[1].track.artist_name}`
         } else {
           console.log('Correct Answer: '+ arr[2].track.artist_name)
-          answerContainer.innerHTML = `Incorrect. Correct Answer: ${arr[2].track.artist_name}`
+          answerContainer.innerHTML = `Correct Answer: ${arr[2].track.artist_name}`
           }
        
-        setTimeout(removeRound(), 10000)
+        setTimeout(removeRound(), 5000)
        
       }
       let scoreContainer = document.querySelector('#score')
@@ -137,25 +139,25 @@ const getLyricSnippet = async (arr) => {
     choice2Container.addEventListener('click', () => {
       if (snippetTrackID === arr[1].track.track_id) {
         console.log('Correct!')
-        answerContainer.innerHTML = 'You Are Correct'
+        answerContainer.innerHTML = 'Correct!'
         score++
         questionTracker++
       
-        setTimeout(removeRound(), 10000)
+        setTimeout(removeRound(), 5000)
 
       } else {
         console.log('Incorrect')
         questionTracker++
         if (snippetTrackID === arr[0].track.track_id) {
           console.log('Correct Answer: ' + arr[0].track.artist_name)
-          answerContainer.innerHTML = `Incorrect. Correct Answer: ${arr[0].track.artist_name}`
+          answerContainer.innerHTML = `Correct Answer: ${arr[0].track.artist_name}`
         } else {
           console.log('Correct Answer: ' + arr[2].track.artist_name)
-          answerContainer.innerHTML = `Incorrect. Correct Answer: ${arr[2].track.artist_name}`
+          answerContainer.innerHTML = `Correct Answer: ${arr[2].track.artist_name}`
         }
      
         
-         setTimeout(removeRound(), 10000)
+         setTimeout(removeRound(), 5000)
 
       }
       let scoreContainer = document.querySelector('#score')
@@ -170,24 +172,24 @@ const getLyricSnippet = async (arr) => {
     choice3Container.addEventListener('click', () => {
       if (snippetTrackID === arr[2].track.track_id) {
         console.log('Correct!')
-        answerContainer.innerHTML = 'You Are Correct'
+        answerContainer.innerHTML = 'Correct!'
         score++
         questionTracker++
      
-        setTimeout(removeRound(), 10000)
+        setTimeout(removeRound(), 5000)
 
       } else {
         console.log('Incorrect')
         questionTracker++
         if (snippetTrackID === arr[1].track.track_id) {
           console.log('Correct Answer: ' + arr[1].track.artist_name)
-          answerContainer.innerHTML = `Incorrect. Correct Answer: ${arr[1].track.artist_name}`
+          answerContainer.innerHTML = `Correct Answer: ${arr[1].track.artist_name}`
         } else {
           console.log('Correct Answer: ' + arr[0].track.artist_name)
-          answerContainer.innerHTML = `Incorrect. Correct Answer: ${arr[0].track.artist_name}`
+          answerContainer.innerHTML = `Correct Answer: ${arr[0].track.artist_name}`
         }
      
-        setTimeout(removeRound(), 10000)
+        setTimeout(removeRound(), 5000)
 
       }
       let scoreContainer = document.querySelector('#score')
