@@ -83,10 +83,26 @@ Time frames are also key in the development cycle.  You have limited time to cod
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+  <div id = 'word-container'>
+    <div id = 'who-container'>
+        <span class = 'letters' id = 'letter1'>W</span>
+        <span class = 'letters' id = 'letter2'>H</span>
+        <span class = 'letters' id = 'letter3'>O</span>
+        <span class = 'letters' id = 'letter4'></span>
+  </div>
+  <div id = 'sang-container'>
+        <span class = 'letters' id = 'letter5'>S</span>
+        <span class = 'letters' id = 'letter6'>A</span>
+        <span class = 'letters' id = 'letter7'>N</span>
+        <span class = 'letters' id = 'letter8'>G</span>
+        <span class = 'letters' id = 'letter9'></span>
+  </div>
+  <div id = 'it-container'>
+        <span class = 'letters' id = 'letter10'>I</span>
+        <span class = 'letters' id = 'letter11'>T</span>
+        <span class = 'letters' id = 'letter12'>?</span>
+  </div>
+  </div>```
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
