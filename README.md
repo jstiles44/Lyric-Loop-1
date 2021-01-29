@@ -66,17 +66,17 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Core HTML & CSS | H | 1hr| 0 hrs |  0 hrs |
-| Return random lyric from API | H | 2.5 hrs| 0 hrs | 0 hrs |
-| Place new lyric on screen after page is refreshed | H | 2.5 hrs| 0 hrs | 0 hrs |
-| Return 3 artists from API | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Place event listener that reveals correct answer | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Return 3 new artists | H | 2.5 hrs| 0 hrs | 0 hrs |
-| Create system to track the score + notify User | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Testing and Debugging | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Final Styling | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Final Styling (cont'd) | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Total | H | 27 hrs| 0 hrs |  0 hrs |
+| Core HTML & CSS | H | 1hr| 0.5 hrs |  0.5 hrs |
+| Return random lyric from API | H | 2.5 hrs| 2.5 hrs | 2.5 hrs |
+| Place new lyric on screen after page is refreshed | H | 2.5 hrs| 1.0 hrs | 1.0 hrs |
+| Return 3 artists from API | H | 3.0 hrs| 1.0 hrs | 1.0 hrs |
+| Place event listener that reveals correct answer | H | 3.0 hrs| 6.0 hrs | 6.0 hrs |
+| Return 3 new artists | H | 2.5 hrs| 4.0 hrs | 4.0 hrs |
+| Create system to track the score + notify User | H | 3.0 hrs| 4.0 hrs | 4.0 hrs |
+| Testing and Debugging | H | 3.0 hrs| 2.0 hrs | 2.0 hrs |
+| Final Styling | H | 3.0 hrs| 3.0 hrs | 3.0 hrs |
+| Final Styling (cont'd) | H | 2.0 hrs| 2.0 hrs | 2.0 hrs |
+| Total | H | 27 hrs| 26 hrs |  26 hrs |
 
 ## Code Snippet
 
