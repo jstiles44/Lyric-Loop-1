@@ -66,27 +66,43 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Core HTML & CSS | H | 1hr| 0 hrs |  0 hrs |
-| Return random lyric from API | H | 2.5 hrs| 0 hrs | 0 hrs |
-| Place new lyric on screen after page is refreshed | H | 2.5 hrs| 0 hrs | 0 hrs |
-| Return 3 artists from API | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Place event listener that reveals correct answer | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Return 3 new artists | H | 2.5 hrs| 0 hrs | 0 hrs |
-| Create system to track the score + notify User | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Testing and Debugging | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Final Styling | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Final Styling (cont'd) | H | 3.0 hrs| 0 hrs | 0 hrs |
-| Total | H | 27 hrs| 0 hrs |  0 hrs |
+| Core HTML & CSS | H | 1hr| 0.5 hrs |  0.5 hrs |
+| Return random lyric from API | H | 2.5 hrs| 2.5 hrs | 2.5 hrs |
+| Place new lyric on screen after page is refreshed | H | 2.5 hrs| 1.0 hrs | 1.0 hrs |
+| Return 3 artists from API | H | 3.0 hrs| 1.0 hrs | 1.0 hrs |
+| Place event listener that reveals correct answer | H | 3.0 hrs| 6.0 hrs | 6.0 hrs |
+| Return 3 new artists | H | 2.5 hrs| 4.0 hrs | 4.0 hrs |
+| Create system to track the score + notify User | H | 3.0 hrs| 4.0 hrs | 4.0 hrs |
+| Testing and Debugging | H | 3.0 hrs| 2.0 hrs | 2.0 hrs |
+| Final Styling | H | 3.0 hrs| 3.0 hrs | 3.0 hrs |
+| Final Styling (cont'd) | H | 2.0 hrs| 2.0 hrs | 2.0 hrs |
+| Total | H | 27 hrs| 26 hrs |  26 hrs |
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+  <div id = 'word-container'>
+    <div id = 'who-container'>
+        <span class = 'letters' id = 'letter1'>W</span>
+        <span class = 'letters' id = 'letter2'>H</span>
+        <span class = 'letters' id = 'letter3'>O</span>
+        <span class = 'letters' id = 'letter4'></span>
+  </div>
+  <div id = 'sang-container'>
+        <span class = 'letters' id = 'letter5'>S</span>
+        <span class = 'letters' id = 'letter6'>A</span>
+        <span class = 'letters' id = 'letter7'>N</span>
+        <span class = 'letters' id = 'letter8'>G</span>
+        <span class = 'letters' id = 'letter9'></span>
+  </div>
+  <div id = 'it-container'>
+        <span class = 'letters' id = 'letter10'>I</span>
+        <span class = 'letters' id = 'letter11'>T</span>
+        <span class = 'letters' id = 'letter12'>?</span>
+  </div>
+  ```
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
