@@ -91,7 +91,6 @@ h1 {
   margin: 50px;
   margin-top: 25px;
   transform-origin: bottom center;
-  /* border: 1px red dotted;  */
   transform: rotate(24deg);
 }
 
@@ -161,7 +160,6 @@ h1 {
   #button-div {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     margin: 0 auto;
     
   }

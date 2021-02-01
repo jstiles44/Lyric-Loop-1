@@ -4,6 +4,8 @@ let hot100url = `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/w
 
 let snippeturl = `https://api.musixmatch.com/ws/1.1/track.snippet.get?track_id=`
 
+// Initialize Score Tracker + Answer Container
+
 let score = 0
 let questionTracker = 0
 let scoreContainer = document.querySelector('#score')
@@ -16,33 +18,25 @@ answerContainer.innerHTML = 'Correct Answer'
 const getHot100 = async () => {
   try {
     let response = await axios.get(hot100url)
-  // console.log(response.data.message.body.track_list)
+  
     let hot100Tracks = response.data.message.body.track_list
-    // console.log(hot100Tracks)
-    let hot100Random1 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
-    // console.log(hot100Random1)
-    let hot100Random2 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
-    if (hot100Random1.track.artist_name === hot100Random2.track.artist_name) {
-      let hot100Random2 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
-    }
-    //  console.log(hot100Random2)
-    let hot100Random3 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
-    if (hot100Random3.track.artist_name === hot100Random2.track.artist_name || hot100Random3.track.artist_name === hot100Random2.track.artist_name) {
-      let hot100Random3 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
-    }
-    //  console.log(hot100Random3)
-    let hot100RandomArray = [hot100Random1, hot100Random2, hot100Random3]
-    // console.log(hot100RandomArray)
-    // console.log(hot100RandomArray[Math.floor((Math.random() * 2) + 0)].track.track_id)
-
-    
    
+    let hot100Random1 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
     
+    let hot100Random2 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
+      if (hot100Random1.track.artist_name === hot100Random2.track.artist_name) {
+        let hot100Random2 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
+      }
+    
+    let hot100Random3 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
+      if (hot100Random3.track.artist_name === hot100Random2.track.artist_name || hot100Random3.track.artist_name === hot100Random2.track.artist_name) {
+        let hot100Random3 = hot100Tracks[Math.floor((Math.random() * 100) + 1)]
+      }
+    
+    let hot100RandomArray = [hot100Random1, hot100Random2, hot100Random3]
+   
     getLyricSnippet(hot100RandomArray)
     
-
-    
-
   } catch (error) {
     console.log(error)
   }
@@ -51,21 +45,21 @@ const getHot100 = async () => {
 getHot100()
 
 // retrieve lyric snippet from 1 of the tracks from hot100RandomArray
+// display lyric and artist choices on screen
+// reveal correct answer and track score when clicked
 
 const getLyricSnippet = async (arr) => {
   
   
   try {
     let snippetTrackID = arr[Math.floor((Math.random() * 2) + 0)].track.track_id
-    // console.log(snippetTrackID)
 
     let lyricResponse = await axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.snippet.get?track_id=${snippetTrackID}&apikey=6a33c1748a705c73d54b40d8deb5038a`)
-    // console.log(lyricResponse)
 
     let lyricSnippet = lyricResponse.data.message.body.snippet.snippet_body
-    // console.log(lyricSnippet)
+   
     let snippetContainer = document.createElement('p')
-    // console.log(snippetContainer)
+    
     gameContainer = document.querySelector('#game-body')
     gameContainer.appendChild(snippetContainer)
     snippetContainer.setAttribute('id', 'snippet')
@@ -92,19 +86,8 @@ const getLyricSnippet = async (arr) => {
     choice3Container.innerHTML = arr[2].track.artist_name
     
 
-    // let answerContainer = document.createElement('p')
-    // answerContainer.setAttribute('class', 'answer')
-    // gameContainer.appendChild(answerContainer)
-    // answerContainer.innerHTML = `answer`
-
-
-    // let choice1Container = document.createElement('button')
-    // choice1Container.setAttribute('class', 'choice-one')
-    // gameContainer.appendChild(choice1Container)
-    // choice1Container.innerHTML = arr[0].track.artist_name
     choice1Container.addEventListener('click', () => {
       if (snippetTrackID === arr[0].track.track_id) {
-        console.log('Correct!')
         answerContainer.innerHTML = 'Correct!'
          score++
          questionTracker++
@@ -112,13 +95,10 @@ const getLyricSnippet = async (arr) => {
         setTimeout(removeRound(), 5000)
 
       } else {
-        console.log('Incorrect')
         questionTracker++
         if (snippetTrackID === arr[1].track.track_id) {
-          console.log('Correct Answer: ' + arr[1].track.artist_name)
           answerContainer.innerHTML = `Correct Answer: ${arr[1].track.artist_name}`
         } else {
-          console.log('Correct Answer: '+ arr[2].track.artist_name)
           answerContainer.innerHTML = `Correct Answer: ${arr[2].track.artist_name}`
           }
        
@@ -131,14 +111,8 @@ const getLyricSnippet = async (arr) => {
     })
 
 
-
-    // let choice2Container = document.createElement('button')
-    // choice2Container.setAttribute('class', 'choice-two')
-    // gameContainer.appendChild(choice2Container)
-    // choice2Container.innerHTML = arr[1].track.artist_name
     choice2Container.addEventListener('click', () => {
       if (snippetTrackID === arr[1].track.track_id) {
-        console.log('Correct!')
         answerContainer.innerHTML = 'Correct!'
         score++
         questionTracker++
@@ -146,13 +120,10 @@ const getLyricSnippet = async (arr) => {
         setTimeout(removeRound(), 5000)
 
       } else {
-        console.log('Incorrect')
         questionTracker++
         if (snippetTrackID === arr[0].track.track_id) {
-          console.log('Correct Answer: ' + arr[0].track.artist_name)
           answerContainer.innerHTML = `Correct Answer: ${arr[0].track.artist_name}`
         } else {
-          console.log('Correct Answer: ' + arr[2].track.artist_name)
           answerContainer.innerHTML = `Correct Answer: ${arr[2].track.artist_name}`
         }
      
@@ -165,13 +136,9 @@ const getLyricSnippet = async (arr) => {
       
     })
 
-    // let choice3Container = document.createElement('button')
-    // choice3Container.setAttribute('class', 'choice-three')
-    // gameContainer.appendChild(choice3Container)
-    // choice3Container.innerHTML = arr[2].track.artist_name
+  
     choice3Container.addEventListener('click', () => {
       if (snippetTrackID === arr[2].track.track_id) {
-        console.log('Correct!')
         answerContainer.innerHTML = 'Correct!'
         score++
         questionTracker++
@@ -179,13 +146,10 @@ const getLyricSnippet = async (arr) => {
         setTimeout(removeRound(), 5000)
 
       } else {
-        console.log('Incorrect')
         questionTracker++
         if (snippetTrackID === arr[1].track.track_id) {
-          console.log('Correct Answer: ' + arr[1].track.artist_name)
           answerContainer.innerHTML = `Correct Answer: ${arr[1].track.artist_name}`
         } else {
-          console.log('Correct Answer: ' + arr[0].track.artist_name)
           answerContainer.innerHTML = `Correct Answer: ${arr[0].track.artist_name}`
         }
      
@@ -205,42 +169,14 @@ const getLyricSnippet = async (arr) => {
   
 }
 
-
-
-
-
-
-
-
-
-// let gameDiv = document.querySelector('#game-body')
-
-// gameDiv.addEventListener('click', (e) => {
-//   e.preventDefault()
-  
-  
-
-//   removeRound()
-// })
-
+// reset round after click
 
 const removeRound = () => {
   let gameContainer = document.querySelector('#game-body')
   while (gameContainer.lastChild) {
     gameContainer.removeChild(gameContainer.lastChild)
   }
-  // let button1 = document.createElement('button')
-  // gameContainer.appendChild(button1)
-  // button1.setAttribute('id', 'choice-1')
-  
-  // let button2 = document.createElement('button')
-  // gameContainer.appendChild(button1)
-  // button2.setAttribute('id', 'choice-2')
-  
-  // let button3 = document.createElement('button')
-  // gameContainer.appendChild(button1)
-  // button3.setAttribute('id', 'choice-3')
-  
+
   getHot100()
 }
 
