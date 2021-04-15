@@ -38,46 +38,13 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Create "song mode" where 3 songs titles are used as choices instead of artist name
 - Create multi-player mode
 
-## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
-|  Day | Deliverable | Status
-|---|---| ---|
-|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Jan 26| Project Approval | Incomplete
-|Jan 27| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Jan 28| Initial Clickable Model  | Incomplete
-|Jan 29| MVP | Incomplete
-|Feb 1| Presentations/Project Submission | Incomplete
 
 ## Priority Matrix
 
 [Priority Matrix](https://imgur.com/a/gQ1qPUN)
 
 
-
-## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Core HTML & CSS | H | 1hr| 0.5 hrs |  0.5 hrs |
-| Return random lyric from API | H | 2.5 hrs| 2.5 hrs | 2.5 hrs |
-| Place new lyric on screen after page is refreshed | H | 2.5 hrs| 1.0 hrs | 1.0 hrs |
-| Return 3 artists from API | H | 3.0 hrs| 1.0 hrs | 1.0 hrs |
-| Place event listener that reveals correct answer | H | 3.0 hrs| 6.0 hrs | 6.0 hrs |
-| Return 3 new artists | H | 2.5 hrs| 4.0 hrs | 4.0 hrs |
-| Create system to track the score + notify User | H | 3.0 hrs| 4.0 hrs | 4.0 hrs |
-| Testing and Debugging | H | 3.0 hrs| 2.0 hrs | 2.0 hrs |
-| Final Styling | H | 3.0 hrs| 3.0 hrs | 3.0 hrs |
-| Final Styling (cont'd) | H | 2.0 hrs| 2.0 hrs | 2.0 hrs |
-| Total | H | 27 hrs| 26 hrs |  26 hrs |
 
 ## Code Snippet
 
@@ -105,5 +72,3 @@ Use this section to include a brief code snippet of functionality that you are p
   </div>
   ```
 
-## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
